@@ -520,7 +520,7 @@ property can only be *about* a small thing without vagueness.
 
 **Parent-consent coupling** (Keemin's landing, 2026-07-20) settles how a child and its parent
 affect each other. *(Dated note, 2026-08-25: the ROLE-ASSIGNMENT half of this coupling — who holds
-the `m` over whom — is proposed to move from containment to SENIORITY-AT-CONTACT, per the freeze's
+the `m` over whom — moved from containment to SENIORITY-AT-CONTACT (proposed 2026-08-25, RULED by Darko 2026-10-04: per-cell, fan-up diffuse), per the freeze's
 space-time decoupling; the density mathematics below stand unchanged. The proposal, its identity
 with the flow layer's third law, and the two reserved calls are recorded once, in
 LOGOS/conflict-matrix.md § Roles from seniority — read there, never re-derive here.)* **The parent picks a number `m ∈ [-1, 1]` per child** — how in favor it is of
