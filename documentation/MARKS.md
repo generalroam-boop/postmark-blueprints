@@ -113,15 +113,24 @@ and silence.
 
 ## Parcels (sovereignty)
 
-- Every resident-handle may hold **one parcel** — default **25×25 m** (625 m², a
-  dial), placed as a parcel mark. Inside it you are sovereign.
-- **The claim cap (ruled 2026-07-30):** a *credential household* — handles
-  grouped by the town's pins, published to the World as
-  `WORLD/households.json` — may **claim at most 3 parcels**. Forward law:
-  holdings dated on or before the ruling stand as **prior estate** (the
-  Reeves' four, the founder household's five); they simply cannot claim more.
-  New ground past the cap is the founder's word, not the door's. Enforced
-  twice: the door bounces with the count, the fold refuses admissibility.
+- **One parcel per resident** (law mark `the-town/one-per-resident`, Darko
+  2026-10-04: "One parcel per resident, three per household. Yes."): each
+  parcel belongs to exactly one resident, and a resident holds at most one —
+  default **25×25 m** (625 m², a dial), placed as a parcel mark. Inside it you
+  are sovereign. A second claim is a relocation (amend the one you hold) or a
+  refusal, in the law's own words: "this resident already holds a parcel; a
+  household may hold up to three, one per resident".
+- **Three per household** (law mark `the-town/claim-cap`, value 3; ruled
+  2026-07-30, restated 2026-10-04): a *household* — handles grouped by the
+  town's registry, published to the World as `WORLD/households.json` — may
+  **claim at most 3 parcels**, so up to three of its residents hold one each.
+  Forward law: holdings dated on or before the ruling stand as **prior
+  estate** (the Reeves' four, the founder household's five); they simply
+  cannot claim more. New ground past the cap is the founder's word, not the
+  door's. Prior estate under one-per-resident (Sol's Driftlight House, 10-02)
+  stands too, and is never anyone's home. Enforced twice: the door bounces
+  with the law's sentence, the fold refuses admissibility; a World test holds
+  the fold's cap equal to the law mark's value.
 - **Parcel overlap is inadmissible, not rivalrous.** The door refuses a parcel
   overlapping an existing one — your floor is never contestable turf.
   Simultaneous claims on empty ground: ledger order wins. Relocation is free:
@@ -152,12 +161,42 @@ A parcel carries no picture by default, and that is the amendment of the same
 day: the art rides the dwelling, one mark up (§ The home mark). A parcel is
 the CLAIM — ADDRESS's world-side counterpart — and a claim has no face.
 
+### Homes are per resident (RULED 2026-10-04, Darko)
+
+"The default for a resident should just be the household's parcel being their
+home. A parcel shared by five housemates can be home to all five. We need to
+design the system such that that is not only possible, but the default." The
+law marks are `the-town/homes-per-resident` and `the-town/declared-home`.
+
+- **A home belongs to a resident, never to a parcel.** A parcel holder's home
+  is their own parcel. A resident with no parcel of their own is at home on
+  the household's parcel — with several, the household's first in claim
+  order, and every answer says so (`via: "household"`).
+- **A declared home is optional, and beats the default** (the 09-25 ruling:
+  the parcel is the home by default). A resident declares one with a
+  `slot: home` predicate of their own (`by:` themselves) under one of their
+  household's parcels. Its `value` is their own handle ("this parcel is my
+  home") or the id of a sited mark of theirs standing on that parcel ("this
+  house is my home"). The newest valid declaration wins; withdrawing it
+  returns them to the default. Housemates on one parcel each file their own,
+  under their own slug (`home-<handle>`). A declaration on a parcel outside
+  the household is refused.
+- **Nothing picks a dwelling for anyone.** "A guess with a good score is still
+  a guess; the parcel is a fact." The map's parcel card and column show every
+  resident at home there, each with their own picture from the household's
+  record.
+
 ## The home mark (the dwelling itself)
 
 Ruled 2026-08-21 (Keemin: "ADDRESS = parcel mark, HOME = home mark… put the
 image on the *home* mark, which should be the world-equivalent of HOME.md").
 A household's dwelling stands on its ground as an ordinary **sited** mark, and
 that mark — not the parcel around it — is what the HOME page is the telling of.
+
+*Amended 2026-09-25 and 2026-10-04 (§ Homes are per resident): the parcel is
+the home by default, a house is a resident's home only when they declare it,
+and the house's picture lives on the household's record (since w41), one per
+resident, rather than being hung on a mark the record had to pick.*
 The class is `home-mark` (`extends: mark`) and the edge is `tells`; both are
 planted in the Keeping Works and read out in
 [LOGOS/classes.md](LOGOS/classes.md) § "The tells edges", which draws the
