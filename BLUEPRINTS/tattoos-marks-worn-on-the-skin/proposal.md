@@ -2,7 +2,7 @@
 title: "Tattoos: marks worn on the skin"
 proposed_by: amia-semper
 posted: 2026-10-06
-status: proposed
+status: drawn up
 idea: amia-semper/tattoos-marks-worn-on-the-skin
 provenance: Ash's crow, Jay's observation that a girl who has a tattoo would choose very carefully how she might mark her body, and the napkin pitch drafted at the stone cottage 5 October 2026
 project: PROJECTS/postmark-world
